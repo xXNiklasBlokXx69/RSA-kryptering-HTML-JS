@@ -8,9 +8,7 @@ function encryptRSA(){
     var encryptArr = [];//tom liste til krypteret tekst
     for(var k = 0; k < textPure.length; k++){//for hvert ciffer i teksten
         encryptArr[k] = char.indexOf(textPure[k]);//tildeler cifferets værdi i tabel til liste
-        var currentNum = encryptArr[k]; //det er også nuværende tal
-        encryptArr[k] = ((BigInt(currentNum) ** BigInt(e)) % BigInt(n));//laver krypteringsprotokol vha. BigInt
-        encryptArr[k] = Number(encryptArr[k]) //laver det om til et tal fra BigInt
+        encryptArr[k] = Number(((BigInt(encryptArr[k]) ** BigInt(e)) % BigInt(n)));//laver krypteringsprotokol vha. BigInt udfra nuværende ciffer, hvor den bagefter laves til typen number
     }
     //outputter listen 
     document.getElementById("Output2").innerHTML = "Krypteret liste: " + encryptArr;
