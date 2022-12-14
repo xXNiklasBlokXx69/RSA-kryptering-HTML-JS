@@ -27,9 +27,8 @@ function decryptRSA(){
     console.log(decryptArr);
     var decryptedText = "";//streng til output af dekrypteret tekst
     for(var o = 0; o < decryptArr.length; o++){//for hvert tal i listen
-        //følg protokol for dekryptering af ciffer vha. BigInt
-        var currentChar = (BigInt(decryptArr[o]) ** BigInt(d)) % BigInt(n);
-        currentChar = Number(currentChar);//laver ciffer om til tal fra BigInt
+        //følg protokol for dekryptering af ciffer vha. BigInt, hvor den laver om til Number
+        var currentChar = Number((BigInt(decryptArr[o]) ** BigInt(d)) % BigInt(n));
         decryptedText += char[currentChar]; //tilføjer cifferet til tal currentChar til dekrypteret tekst
         finalText += currentChar + ",";//Til finaltekst tilføjes omdannet ciffer
     }
