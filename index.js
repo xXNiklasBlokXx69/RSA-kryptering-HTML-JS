@@ -75,7 +75,7 @@ function gcdExtended(a, b){
     //opdaterer x og y efter rekusion
     x = y1 - Math.floor(b / a) * x1;
     y = x1;
-    //retunerer stf
+    //retunerer største fælles divisor
     return gcd;
 }
  
