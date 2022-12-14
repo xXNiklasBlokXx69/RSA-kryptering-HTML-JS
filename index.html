@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Denne HTML-dokument er udarbejdet af Niklas-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSA-kryptering</title>
+    <!--Link til scripts med nøglegenerering, kryptering og dekryptering-->
+    <script src="index.js"></script>
+    <script src="encrypt.js"></script>
+    <script src="decrypt.js"></script>
+</head>
+<body>
+    <h1>RSA-kryptering</h1>
+    <form>
+        <!--Denne form er til input af primtal og tal e til nøglegenerering-->
+        <h2>Generer nøgler</h2>
+        <input type="number" placeholder="Første primtal" id="Primtal1">
+        <input type="number" placeholder="Andet Primtal" id="Primtal2">
+        <input type="number" placeholder="e" id="e">
+        <!--Hvis man trykker på knappen, så starter generering af nøgler-->
+        <button onclick="calculateKey()" type="button">Tryk her</button>
+        <p>Output:</p>
+        <p id="Output1"></p><!--Linje til output af nøgler-->
+    </form>
+    <form>
+        <h2>Kryptér</h2>
+        <!--Denne form er til input af offentlige nøgler og klartekst til kryptering-->
+        <input type="number" placeholder="e" id="eEncrypt">
+        <input type="number" placeholder="n" id="nEncrypt">
+        <input type="text" placeholder="Besked" id="textBefore">
+        <!--Hvis man trykker på knappen, så starter kryptering af klartekst-->
+        <button onclick="encryptRSA()" type="button">Tryk her</button>
+        <p>Output:</p>
+        <p id="Output2"></p><!--Linje til krypteret besked-->
+    </form>
+    <form>
+        <!--Denne form er til input af privat nøgle og offentlige nøgle n og ciffertekst til dekryptering-->
+        <h2>Dekryptér</h2>
+        <input type="number" placeholder="d" id="dDecrypt">
+        <input type="number" placeholder="n" id="nDecrypt">
+        <input type="text" placeholder="Krypteret Besked" id="textAfter">
+        <button onclick="decryptRSA()" type="button">Tryk her</button>
+        <p>Output:</p>
+        <p id="Output3"></p><!--Linje til dekrypteret besked-->
+    </form>
+</body>
+</html>
