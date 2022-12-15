@@ -1,3 +1,4 @@
+//Denne dekrypteringsfunktion er skrevet af Niklas
 function decryptRSA(){
     //får indput fra indputfelterne
     var d = document.getElementById("dDecrypt").value;

@@ -1,4 +1,4 @@
-function calculateKey(){
+function calculateKey(){//skrevet af mig
     var p = document.getElementById("Primtal1").value;
     var q = document.getElementById("Primtal2").value;
     var e = document.getElementById("e").value;

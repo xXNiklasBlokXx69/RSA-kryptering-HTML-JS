@@ -1,3 +1,4 @@
+//Denne script krypterer min kode (Skrevet af Niklas)
 //streng til at have ciffrene i til at få bogstaver til tal
 const char = " abcdefghijklmnopqrstuvwxyzæøåABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅ0123456789";
 function encryptRSA(){
