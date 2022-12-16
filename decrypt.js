@@ -30,7 +30,7 @@ function decryptRSA(){
     for(var o = 0; o < decryptArr.length; o++){//for hvert tal i listen
         //følg protokol for dekryptering af ciffer vha. BigInt, hvor den laver om til Number
         var currentChar = Number((BigInt(decryptArr[o]) ** BigInt(d)) % BigInt(n));
-        decryptedText += char[currentChar]; //tilføjer cifferet til tal currentChar til dekrypteret tekst
+        decryptedText += char[currentChar]; //tilføjer cifferet omdannet med tabel til dekrypteret tekst
         finalText += currentChar + ",";//Til finaltekst tilføjes omdannet ciffer
     }
     //opsætter outputteksten og sætter den på 3. outputfelt
